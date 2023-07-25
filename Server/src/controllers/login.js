@@ -2,7 +2,6 @@ const users = require("../utils/users");
 
 function login(req, res) {
   const { email, password } = req.query;
-console.log(email,password)
   users.forEach((user) => {
     if (user.email === email && user.password === password) {
       const access = {
